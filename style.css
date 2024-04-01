@@ -1,0 +1,99 @@
+:root {
+  --txt-primary: #535353;
+  --txt-hover: #292929;
+  --background: white;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  min-height: 100vh;
+  display: flex ;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Press Start 2P', cursive;
+  color: var(--txt-primary);
+  background-color: var(--background);
+  margin: 0;
+}
+
+.game {
+  position: relative;
+  width: 600px;
+  height: 230px;
+  overflow: hidden;
+  border: 2px solid gray; /* Adjust the thickness as needed */
+  padding: 15px; /* Adjust the padding as needed */
+}
+
+}
+
+.score {
+  position: absolute;
+  right: 5vmin;
+  top: 1vmin;
+  font-size: .9rem;
+}
+
+.start-message {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: .8rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.gameover-message {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: .9rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.gameover-message p {
+  letter-spacing: .6em;
+}
+
+.gameover-message span {
+  font-size: .7rem;
+  text-transform: none;
+}
+
+.ground {
+  --left: 0;
+  width: 300%;
+  position: absolute;
+  bottom: 0;
+  left: calc(var(--left) * 1%);
+}
+
+.dino {
+  --bottom: 0;
+  height: 30%;
+  position: absolute;
+  left: 1%;
+  bottom: calc(var(--bottom) * 1%);
+}
+
+.cactus {
+  height: 20%;
+  position: absolute;
+  bottom: 0;
+  left: calc(var(--left) * 1%);
+}
+
+.hide {
+  display: none;
+}
+
+
