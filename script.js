@@ -81,12 +81,12 @@ function handleGameOver() {
   setTimeout(() => {
     document.addEventListener("keydown", startGame, { once: true });
     gameoverMessage.classList.remove("hide");
-    // Dodajemy również nasłuchiwanie kliknięcia na element gry, jeśli gra zostanie przegrana
+  
     game.addEventListener("click", startGame, { once: true });
-    // Dodajemy nasłuchiwanie dotknięcia ekranu na elemencie gry, jeśli gra zostanie przegrana
+   
     game.addEventListener("touchstart", startGame, { once: true });
 
-    // Dodajemy odtwarzanie dźwięku po przegranej grze
+  
     const audio = new Audio('assets/sound.mp3');
     audio.play();
   }, 100);
@@ -98,7 +98,7 @@ function onTouchJump() {
   if (!isJumping) {
     yVelocity = JUMP_SPEED;
     isJumping = true;
-    JUMP_SOUND.play(); // Odtwarzamy dźwięk skoku
+    JUMP_SOUND.play(); 
   }
 }
  
@@ -163,7 +163,7 @@ function setupDino() {
   document.removeEventListener("keydown", onJump); /* reset the dinosaur if the player dies while jumping */
   document.addEventListener("keydown", onJump);
   
-  // Dodajemy nasłuchiwanie zdarzenia kliknięcia myszką na obszarze gry
+
   game.addEventListener("mousedown", onClickJump);
 }
 
@@ -212,14 +212,14 @@ function onJump(e) {
 
   yVelocity = JUMP_SPEED;
   isJumping = true;
-  JUMP_SOUND.play(); // Odtwarzamy dźwięk skoku
+  JUMP_SOUND.play(); 
 }
 
 function onClickJump() {
   if (!isJumping) {
     yVelocity = JUMP_SPEED;
     isJumping = true;
-    JUMP_SOUND.play(); // Odtwarzamy dźwięk skoku
+    JUMP_SOUND.play(); 
   }
 }
 
